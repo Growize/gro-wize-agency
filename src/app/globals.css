@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Deep backgrounds for depth and contrast */
+  --color-void-900: #050507;
+  --color-void-800: #0A0A0F;
+  --color-void-700: #14141A;
+  
+  /* Futuristic accent colors */
+  --color-cyber-cyan: #00F0FF;
+  --color-cyber-purple: #8A2BE2;
+  --color-cyber-emerald: #00FF66;
+  
+  /* Typography colors */
+  --color-starlight-100: #FFFFFF;
+  --color-starlight-200: #E2E8F0;
+  --color-starlight-300: #94A3B8;
+
+  /* Custom Futuristic Gradient */
+  --background-image-gradient-futuristic: linear-gradient(to right, #8A2BE2, #00F0FF);
+
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-arabic: var(--font-cairo), ui-sans-serif, system-ui, sans-serif;
+--animate-shimmer: shimmer 2s infinite linear;
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(400%); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-void-900 text-starlight-200 antialiased selection:bg-cyber-cyan selection:text-void-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-starlight-100 font-bold tracking-tight;
+  }
+}
